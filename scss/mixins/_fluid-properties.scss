@@ -1,0 +1,16 @@
+@use '../variables' as *;
+@use '../functions/functions' as *;
+
+@mixin fluid-property($property, $min-size, $max-size) {
+  $unit: unit($min-size);
+  $min-vw: $min-vw;
+  $max-vw: $max-vw;
+
+  @if $unit == rem  {
+    $min-vw: toRem($min-vw);
+    $max-vw: toRem($max-vw);
+  }
+  
+  $target-size: calc($min-size + (strip-unit($max-size) - strip-unit($min-size)) * ((100vw - $min-vw) / (strip-unit($max-vw) - strip-unit($min-vw))));
+  #{$property}: clamp($min-size, $target-size, $max-size);
+}
