@@ -5,7 +5,7 @@
 
 ## Usage
 
-Use with any property with either px or rem units:
+Use with any unit based property with either px or rem units:
 
 ```scss
 p {
