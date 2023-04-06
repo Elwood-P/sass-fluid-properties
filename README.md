@@ -1,7 +1,7 @@
 # Sass Fluid Properties
 
 > A Sass mixin to simplify using CSS fluid properties.  
-> [Read blog post](#)
+> [Read blog post](https://elwoodp.dev/articles/flexible-sizing-in-css/)
 
 ## Usage
 
